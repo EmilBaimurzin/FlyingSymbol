@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ColorApp</string>
+    <string name="pause">Pause</string>
+    <string name="you_ve_lost">Game Over</string>
+    <string name="skin">SKIN</string>
+    <string name="music">MUSIC</string>
+</resources>

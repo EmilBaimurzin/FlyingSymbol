@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_game"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"
+        android:id="@+id/horizontalLine"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_main_elements" />
+
+    <com.symbol.game.core.library.CustomImageButton
+        android:id="@+id/buttonPlay"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:src="@drawable/button_play"
+        app:layout_constraintBottom_toTopOf="@+id/buttonShop"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.symbol.game.core.library.CustomImageButton
+        android:id="@+id/buttonShop"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:src="@drawable/button_shop"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalLine" />
+
+    <com.symbol.game.core.library.CustomImageButton
+        android:id="@+id/buttonOptions"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:src="@drawable/button_options"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonShop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginBottom="20dp"
+        android:layout_height="270dp">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/you_ve_lost"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scoresTextView"
+            style="@style/BasicText"
+            tools:text="100"
+            android:layout_marginTop="10dp"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_text"
+            android:paddingHorizontal="10dp"
+            app:autoSizeMaxTextSize="28sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <LinearLayout
+            android:id="@+id/starsLayout"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_text"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoresTextView">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingBottom="4dp"
+                android:src="@drawable/img_star" />
+
+            <TextView
+                android:id="@+id/starsTextView"
+                style="@style/BasicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textSize="28sp"
+                tools:text="135" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.symbol.game.core.library.CustomImageButton
+        android:id="@+id/buttonClose"
+        android:layout_width="60dp"
+        android:layout_gravity="bottom|center"
+        android:layout_height="60dp"
+        android:src="@drawable/button_close"/>
+
+</FrameLayout>
