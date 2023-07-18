@@ -31,6 +31,7 @@ class FragmentOptions :
                 null
             )!!
         )
+        binding.musicSlider.value = sharedPrefs.getVolume().toFloat()
         viewModel = ViewModelProvider(
             this,
             OptionsViewModelFactory(args.skin)
